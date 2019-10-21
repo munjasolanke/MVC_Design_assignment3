@@ -1,0 +1,58 @@
+﻿@model MVC_assignment_3.Models.Fruits
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Fruits</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FruitName" class="control-label"></label>
+                <input asp-for="FruitName" class="form-control" />
+                <span asp-validation-for="FruitName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FruitForm" class="control-label"></label>
+                <input asp-for="FruitForm" class="form-control" />
+                <span asp-validation-for="FruitForm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AvgRetailPrice" class="control-label"></label>
+                <input asp-for="AvgRetailPrice" class="form-control" />
+                <span asp-validation-for="AvgRetailPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreparationYieldFactor" class="control-label"></label>
+                <input asp-for="PreparationYieldFactor" class="form-control" />
+                <span asp-validation-for="PreparationYieldFactor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sizeofcupequivalent" class="control-label"></label>
+                <input asp-for="Sizeofcupequivalent" class="form-control" />
+                <span asp-validation-for="Sizeofcupequivalent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AvgPricepercupequivalent" class="control-label"></label>
+                <input asp-for="AvgPricepercupequivalent" class="form-control" />
+                <span asp-validation-for="AvgPricepercupequivalent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,54 @@
+﻿@model MVC_assignment_3.Models.Vegetables
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vegetables</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VegetableName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VegetableName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VegetableForm)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VegetableForm)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AvgRetailPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvgRetailPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PreparationYieldFactor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PreparationYieldFactor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sizeofcupequivalent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sizeofcupequivalent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AvgPricepercupequivalent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvgPricepercupequivalent)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
